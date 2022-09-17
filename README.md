@@ -1,4 +1,4 @@
-# distm
+# distm [![build](https://github.com/jnclark/distm/actions/workflows/build.yml/badge.svg)](https://github.com/jnclark/distm/actions/workflows/build.yml)
 
 A `python` package for quick distance matrix calculation for two
 dimensional points.

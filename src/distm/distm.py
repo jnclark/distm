@@ -37,6 +37,7 @@ def calcm(points):
         dist_matrix)
     return dist_matrix
 
+
 # Parallel version
 
 
@@ -116,6 +117,32 @@ def calcm3d_parallel(points):
         internal_points.shape[1],
         dist_matrix)
     return dist_matrix
+
+
+# Wrapper functions for easy use of bothe 2d and 3d sequential and
+# parallel functions
+
+
+def distm(points):
+    if points.shape[1] == 2:
+        return calcm(points)
+    elif points.shape[1] == 3:
+        return calcm3d(points)
+    else:
+        raise ValueError(
+            "Dimension of points not supported. Point dimension: {}".format(
+                points.shape[1]))
+
+
+def distm_parallel(points):
+    if points.shape[1] == 2:
+        return calcm_parallel(points)
+    elif points.shape[1] == 3:
+        return calcm3d_parallel(points)
+    else:
+        raise ValueError(
+            "Dimension of points not supported. Point dimension: {}".format(
+                points.shape[1]))
 
 
 # Naive function for testing

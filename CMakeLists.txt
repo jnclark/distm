@@ -1,0 +1,6 @@
+if ( ${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_BINARY_DIR} )
+    message( FATAL_ERROR "In-source builds not enabled. Please make a new directory (e.g. build in the project root) and run cmake .. there. You may need to remove CMakeCache.txt and CMakeFiles." )
+cmake_minimum_required(VERSION 3.3)
+project(distm)
+endif()
+include(${CMAKE_CURRENT_SOURCE_DIR}/src/CMakeLists.txt)

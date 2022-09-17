@@ -1,0 +1,2 @@
+include src/distm/libdistm.so
+include VERSION.txt
